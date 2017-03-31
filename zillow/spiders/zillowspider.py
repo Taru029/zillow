@@ -52,7 +52,7 @@ class ZillowspiderSpider(scrapy.Spider):
 
 
     #The response from the pages will be recieved in the following function and it will fetch all the details from particular <li>s though loop
-    #and stored in an 'item' array which will return the data to pipeline and pipeline will create a resulting json file.
+    #and store in an 'item' array which will return the data to pipeline and pipeline will create a resulting json file.
     def parse(self, response):
         titles = response.selector.css('ul.photo-cards > li')
         for titles in titles:
